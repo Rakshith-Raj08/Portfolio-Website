@@ -22,6 +22,11 @@ html{
 }
  
 
+html,
+body {
+  
+}
+
 *,
 *::before,
 *::after{
@@ -35,6 +40,9 @@ body{
     color: var(--white);
     font-size: var(--fs-body);
     line-height: 1.56;
+    
+    
+    
 }
 
 h1,h2,h3,p{
@@ -69,7 +77,7 @@ a.underline{
     padding-bottom: 10px;
     font-size: 1rem;
     line-height: 1.625rem;
-    letter-spacing: 2.29px;
+    letter-spacing: 0.143em;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--white);
@@ -90,6 +98,7 @@ a:hover{
     justify-content: center;
     text-align: center;
     gap: 20px 25px;
+    
 }
 
 .header_social{
@@ -114,6 +123,8 @@ a:hover{
    .wrapper{
     width: calc(100% - 3.75rem);
    }
+
+   
 }
 
 .header_home{
@@ -127,7 +138,10 @@ a:hover{
 .header{
     margin-top: 20px;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 10px; 
+    position: relative;
+  z-index: 1;
+  margin-block-start: 20px;
 }
 
 @media (min-width: 37.5em){
@@ -145,6 +159,24 @@ a:hover{
     }
 
 
+}
+
+@media(min-width:62.5em){
+    .header{
+        margin-block-start: 40px;
+        margin-block-end: 127px;
+        
+        
+    }
+
+    .nav_header{
+        padding-right: 30px;
+        padding-left: 30px;
+        display: flex;
+        
+        
+        
+    }
 }
 
 .hero{
@@ -166,16 +198,17 @@ a:hover{
     display: block;
     opacity: 50%;
     z-index: 1;
+    
 }
 
 .hero__text{
     text-align: center;
-    margin-top: 410px;
+    margin-top: 25.9375rem;
     position: relative;
 }
 
 .hero__des{
-
+    margin-bottom: 24px;
 }
 
 .hero__contact{
@@ -185,9 +218,13 @@ a:hover{
 
 .hero__circle{
     position: absolute;
-    top: 364px;
+    top: 15.875rem;
     right: 0;
     translate: 50%;
+    width: 8.0625rem;
+    height: 8.0625rem;
+    overflow: hidden;
+   
 }
 
 .hero__rings{
@@ -195,12 +232,16 @@ a:hover{
     right: 50%;
     top: 270px;
     z-index: -1;
+    overflow: hidden;
    
 }
 
-@media (min-width: 37.5em){
+
+
+
+ @media (min-width: 37.5em){
     .hero__image{
-        width: 20.125rem;
+        width: 322px;
         height: auto;
         left: auto;
         right: 0;
@@ -208,19 +249,95 @@ a:hover{
         top: 0;
         z-index: -1;
     }
+
+    
     .hero__text{
-        width: 55vw;
+        width: 52vw;
         margin-top: 0;
         text-align: left;
     }
 
     .header{
         margin-top: 30px;
+        margin-bottom: 90px;
+        
     }
 
     .hero__rings{
         top:100px;
     }
+
+    .hero__des{
+        margin-bottom: 34px;
+    }
+
+    .hero__wrapper{
+        padding-bottom: 40px;
+        border-bottom: 1px solid var(--gray);
+    }
+
+    .header_home{
+        flex: 0 1 auto;
+        margin-inline-end: auto;
+    }
  }
+
+
+ @media(min-width:62.5em){
+
+    .hero{
+        margin-top: 0px;
+    }
+    .hero__headline{
+        margin-bottom: 43px;
+        
+       
+    }
+
+    .hero__content{
+        align-items: flex-start;
+    }
+
+    .hero__content img {
+        margin-left: -80px;
+    }
+
+    .hero__image{
+        width: 405px;
+        translate:  0 -205px;
+    }
+
+    .hero__headline > br {
+        display: none;
+    }
+
+    .hero__des{
+        margin-bottom: 66px;
+    }
+
+    .hero__wrapper{
+        position: relative;
+    }
+
+    .hero__circle{
+        top:150px;
+        right: 400px;
+        
+    }
+
+    .hero__text{
+        margin-top: 0;
+        flex: 1;
+        margin-right: 0;
+        
+        max-width: 720px;
+
+    }
+
+    
+
+    
+ }
+
 
  
